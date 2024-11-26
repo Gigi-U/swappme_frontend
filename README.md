@@ -4,7 +4,8 @@ Frontend for a decentralized exchange (DEX) built with Solidity, enabling users 
 ## Technologies Used
 
 
-![React](https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg)
-![Web3.js](https://seeklogo.com/images/W/web3-logo-03377DB11E-seeklogo.com.png)
-![MetaMask](https://upload.wikimedia.org/wikipedia/commons/3/36/MetaMask_Fox.svg)
-![Axios](https://upload.wikimedia.org/wikipedia/commons/c/c8/Axios_logo_%282020%29.svg)
+![React](https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg){:height="30px"}
+![Web3.js](https://seeklogo.com/images/W/web3-logo-03377DB11E-seeklogo.com.png){:height="30px"}
+![MetaMask](https://upload.wikimedia.org/wikipedia/commons/3/36/MetaMask_Fox.svg){:height="30px"}
+![Axios](https://upload.wikimedia.org/wikipedia/commons/c/c8/Axios_logo_%282020%29.svg){:height="30px"}
+
