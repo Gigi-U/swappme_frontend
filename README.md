@@ -3,7 +3,7 @@ Frontend for a decentralized exchange (DEX) built with Solidity, enabling users 
 
 ## Technologies Used
 
-<div style="display: flex; gap: 10px;">
+<div style="display: flex; gap: 10px; background-color: rgba(255, 255, 255, 0.6); padding: 10px; width: 100%; justify-content: center;">
   <img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" height="30">
   <img src="https://seeklogo.com/images/W/web3-logo-03377DB11E-seeklogo.com.png" height="30">
   <img src="https://upload.wikimedia.org/wikipedia/commons/3/36/MetaMask_Fox.svg" height="30">
