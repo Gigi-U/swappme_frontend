@@ -70,17 +70,4 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 
 
-## Technologies Used
 
-This project uses the following technologies for its development:
-
-- **React**: JavaScript library for building interactive user interfaces.
-  <img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" alt="React logo" width="20"/>
-
-- **Solidity**: Programming language for smart contracts on the Ethereum blockchain.
-  <img src="https://en.m.wikipedia.org/wiki/File:Solidity_logo.svg" alt="Solidity logo" width="20"/>
-
-- **Ethers.js**: Library to interact with the Ethereum blockchain from the browser or Node.js.
-  <img src="https://avatars.githubusercontent.com/u/15723053?s=200&v=4" alt="Ethers.js logo" width="20"/>
-
-- **Node.js**: JavaScript runtime environment for server-side development, used in this proje
