@@ -1,9 +1,9 @@
 // App.js
 import React, { useEffect } from "react";
 import "./shootingStars.css";
-import logo from "./logo.png"; // Asegúrate de poner tu logo en esta ruta
-import Footer from "./commons/footer"; // Importa correctamente el Footer desde la carpeta commons
-import './commons/footer.css'; // Asegúrate de tener este archivo en la misma carpeta
+import Footer from "./commons/footer"; 
+import Header from "./commons/header";
+import EthCoin from "./commons/ethCoin";
 
 
 function App() {
@@ -48,22 +48,22 @@ function App() {
 
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} alt="Logo" className="logo" />
-        <button className="header-button"><p>CONNECT WALLET</p></button>
-      </header>
+      {/* Componente Header */}
+      <Header />
       <div id="stars"></div>
-
+      
       {/* Agregar el div transparente en el centro */}
       <div className="center-box">
         <p className="dex-title">DEX</p>
-        <div className="boxes-container">
+          {/* Usar EthCoin como componente */}
+          <EthCoin />        
+          <div className="boxes-container">
           <div className="from-box"><p>From</p></div>
           <div className="to-box"><p>To</p></div>
         </div>
       </div>
 
-      {/* Agregar el Footer */}
+      {/* Componente Footer */}
       <Footer />
     </div>
   );
