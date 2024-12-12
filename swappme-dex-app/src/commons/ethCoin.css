@@ -1,14 +1,16 @@
 .animation-container {
-  display: relative;
+  position: absolute;
   width: 10%;
   height: 10%;
-  margin-left: 50%;
-  margin-top: 20px;
+  left: 50%;
+  transform: translateX(-50%); /* Para centrar horizontalmente */
+  top: 490px; /* Ajusta esta distancia para que esté debajo del header */
+  z-index: 100; /* Asegura que la moneda esté por encima de otros elementos */
 }
 
 .coin-container {
   position: relative;
-  top: 30px;
+  top: 45px;
   height: 30%;
   width: 30%;
   transform: scale(0.5) translateX(0) scaleY(0.7);
@@ -31,8 +33,6 @@
   border-radius: 100%;
   overflow: hidden;
 }
-
-
 
 .side {
   position: absolute;
@@ -128,12 +128,12 @@
 @keyframes bounce {
   20% {
     animation-timing-function: ease-out;
-    transform: translateY(-60px);
+    transform: translateY(-30px);
   }
 
   50% {
     animation-timing-function: ease-out;
-    transform: translateY(-80px);
+    transform: translateY(-50px);
   }
 }
 

@@ -1,10 +1,11 @@
-// App.js
 import React, { useEffect } from "react";
-import "./shootingStars.css";
 import Footer from "./commons/footer"; 
 import Header from "./commons/header";
+import "./shootingStars.css";
+import "./App.css";
 import EthCoin from "./commons/ethCoin";
-
+import "./commons/header.css";
+import "./commons/footer.css";
 
 function App() {
   useEffect(() => {
@@ -51,16 +52,57 @@ function App() {
       {/* Componente Header */}
       <Header />
       <div id="stars"></div>
-      
+
       {/* Agregar el div transparente en el centro */}
       <div className="center-box">
-        <p className="dex-title">DEX</p>
-          {/* Usar EthCoin como componente */}
-          <EthCoin />        
-          <div className="boxes-container">
-          <div className="from-box"><p>From</p></div>
-          <div className="to-box"><p>To</p></div>
+        <p className="dex-title">DEX</p>        
+
+
+        {/* Contenedor de los paneles */}
+        <div className="boxes-container">
+          {/* Panel 1: From and To */}
+          <div className="panel-box">
+          <p>From</p>
+            <input type="text" placeholder="From Token Address" />
+            <p>To</p>
+            <input type="text" placeholder="To Token Address" />
+            {/* Botón debajo de los campos */}
+            <button className="convert-button">Convert</button>
         </div>
+
+
+          {/* Panel 2: Agregar Liquidez */}
+          <div className="panel-box">
+            <p>Add Liquidity</p>
+            <input type="text" placeholder="Enter Token Address" />
+            <input type="number" placeholder="Enter Amount" />
+            <button className="convert-button">Add Liquidity</button>
+          </div>
+
+          {/* Panel 3: Retirar Liquidez */}
+          <div className="panel-box">
+            <p>Withdraw Liquidity</p>
+            <input type="text" placeholder="Enter Token Address" />
+            <input type="number" placeholder="Enter Amount" />
+            <button className="convert-button">Withdraw Liquidity</button>
+          </div>
+
+          {/* Panel 6: Obtener Precio de un Token */}
+          <div className="panel-box">
+            <p>Get Token Price</p>
+            <input type="text" placeholder="Enter Token Address" />
+            <button className="convert-button">Get Price</button>
+            <br></br>
+            <p>X's price: xxxxxxxxxxxxxxx</p>
+
+          </div>
+
+        </div>
+      </div>
+
+      {/* Componente EthCoin centrado arriba */}
+      <div className="eth-coin-container">
+        <EthCoin />
       </div>
 
       {/* Componente Footer */}
