@@ -128,12 +128,12 @@
 @keyframes bounce {
   20% {
     animation-timing-function: ease-out;
-    transform: translateY(-30px);
+    transform: translateY(-10px);
   }
 
   50% {
     animation-timing-function: ease-out;
-    transform: translateY(-50px);
+    transform: translateY(-20px);
   }
 }
 

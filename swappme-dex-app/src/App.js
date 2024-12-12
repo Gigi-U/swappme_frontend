@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import Footer from "./commons/footer"; 
 import Header from "./commons/header";
 import "./shootingStars.css";
@@ -8,6 +8,12 @@ import "./commons/header.css";
 import "./commons/footer.css";
 
 function App() {
+  const [conversionType, setConversionType] = useState("AtoB");
+
+  // Definir la función handleConversionTypeChange aquí
+  const handleConversionTypeChange = (event) => {
+    setConversionType(event.target.value);
+  };
   useEffect(() => {
     const starCount = 45; // Número de estrellas
     const starsContainer = document.getElementById("stars");
@@ -55,41 +61,58 @@ function App() {
 
       {/* Agregar el div transparente en el centro */}
       <div className="center-box">
-        <p className="dex-title">DEX</p>        
+        <h1 className="dex-title">DEX</h1>        
 
 
         {/* Contenedor de los paneles */}
         <div className="boxes-container">
           {/* Panel 1: From and To */}
           <div className="panel-box">
-          <p>From</p>
-            <input type="text" placeholder="From Token Address" />
-            <p>To</p>
-            <input type="text" placeholder="To Token Address" />
+            <h3>Swapp Tokens</h3>
+            <select onChange={handleConversionTypeChange} value={conversionType}>
+              <option value="AtoB">From Token A to Token B</option>
+              <option value="BtoA">From Token B  to Token A</option>
+            </select>
+            
+            {conversionType === "AtoB" ? (
+              <>
+                <p>From</p>
+                <input type="text" placeholder="Enter TokenA Address" />
+                <p>To</p>
+                <input type="text" placeholder="Enter TokenB Address" />
+              </>
+            ) : (
+              <>
+                <p>From</p>
+                <input type="text" placeholder="Enter TokenB Address" />
+                <p>To</p>
+                <input type="text" placeholder="Enter TokenA Address" />
+              </>
+            )}
+
             {/* Botón debajo de los campos */}
             <button className="convert-button">Convert</button>
-        </div>
-
+          </div>
 
           {/* Panel 2: Agregar Liquidez */}
           <div className="panel-box">
-            <p>Add Liquidity</p>
+            <h3>Add Liquidity</h3>
             <input type="text" placeholder="Enter Token Address" />
             <input type="number" placeholder="Enter Amount" />
-            <button className="convert-button">Add Liquidity</button>
+            <button className="convert-button">Add</button>
           </div>
 
           {/* Panel 3: Retirar Liquidez */}
           <div className="panel-box">
-            <p>Withdraw Liquidity</p>
+            <h3>Withdraw Liquidity</h3>
             <input type="text" placeholder="Enter Token Address" />
             <input type="number" placeholder="Enter Amount" />
-            <button className="convert-button">Withdraw Liquidity</button>
+            <button className="convert-button">Withdraw</button>
           </div>
 
           {/* Panel 6: Obtener Precio de un Token */}
           <div className="panel-box">
-            <p>Get Token Price</p>
+            <h3>Get Token Price</h3>
             <input type="text" placeholder="Enter Token Address" />
             <button className="convert-button">Get Price</button>
             <br></br>

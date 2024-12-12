@@ -37,7 +37,7 @@
 .header-button.connected {
   background-color: rgba(214, 13, 170, 0.966); /* Fondo cuando está conectado */
   border: 0.2px solid #ffffffb6; /* Borde blanco */
-  box-shadow: 0 0 10px 2px rgba(214, 13, 170, 0.966), 0 0 15px 4px rgba(214, 13, 170, 0.966); /* Efecto neón */
+  box-shadow: 0 0 5px 1px rgba(214, 13, 170, 0.966), 0 0 10px 2px rgba(214, 13, 170, 0.966); /* Efecto neón */
 }
 
 .header-button.connected p {

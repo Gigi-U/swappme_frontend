@@ -12,7 +12,7 @@ body {
 /* Estilo del div transparente en el centro */
 .center-box {
   position: absolute;
-  top: 47%; /* Espacio para el header */
+  top:50%; /* Espacio para el header */
   left: 50%;
   transform: translate(-50%, -50%);
   padding: 20px;
@@ -54,7 +54,7 @@ body {
 
 /* Estilo para cada panel-box */
 .panel-box {
-  padding: 20px;
+  padding: 1px 20px 20px 20px;
   background-color: rgb(23, 23, 33);
   border-radius: 2px;
   text-align: left;
@@ -62,29 +62,43 @@ body {
   min-width: 250px; /* Asegura que cada div no sea demasiado pequeño */
   box-sizing: border-box; /* Asegura que los bordes no rompan el tamaño */
 }
+.panel-box h3{
+  font-size: 15px;
+  font-weight: bolder;
+  margin-top: 10px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.panel-box p{
+  margin-top: 10px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 12px;
+
+}
 
 .panel-box input {
   border-radius: 2px;
   padding: 10px 10px;
   width: 90%;
-  margin-top: 20px;
-  background-color: #333;
-  border: 0.2px solid #ffffff00; /* Borde blanco */
+  margin-top: 8px;
+  background-color:  #19191a00;
+  border: 0.1px solid #ffffff22; /* Borde blanco */
   color: white;
 }
 /* Botón Convert similar al de Connect Wallet */
 .convert-button {
   margin-top: 20px;
-  background-color: rgba(214, 13, 170, 0.966); /* Fondo cuando está conectado */
-  color: white; /* Color de texto */
-  border: 0.2px solid #ffffffb6; /* Borde blanco */
+  background-color: rgba(214, 13, 170, 0); /* Fondo cuando está conectado */
+  color:  rgb(23, 23, 33); /* Color de texto */
+  border: 0.1px solid rgba(214, 13, 170, 0.966); 
+  color: rgba(214, 13, 170, 0.966);
   border-radius: 1px;
   padding: 10px 10px;
   width: 98%;
   margin-right: 20px;
   cursor: pointer;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bold;
   font-size: 12px;
-  cursor: pointer;
   transition: all 0.3s ease;
   display: flex;
   justify-content: center;
@@ -92,12 +106,69 @@ body {
   text-transform: uppercase; /* Hacer texto en mayúsculas */
 }
 
-/* Efecto hover */
-.convert-button:hover {
-  background-color: #5feb66;
-  transform: translateY(-2px); /* Desplazamiento hacia arriba al pasar el mouse */
-  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+/* Se mantiene el color cuando el botón fué seleccionado (focus) */
+.convert-button:focus {
+  outline: none; /* Eliminar el contorno por defecto */
+  background-color: #45a049; /* Color de fondo verde cuando está en foco */
+  color: white; /* Color del texto blanco cuando está en foco */
+  border-color: #45a049; /* Borde verde cuando está en foco */
 }
+
+/* Cambio de color cuando se pasa el ratón por encima (hover) */
+.convert-button:hover {
+  background-color: #3e8e41; /* Color de fondo verde oscuro cuando hover */
+  border:none;
+  color: white; /* Color del texto blanco al hacer hover */
+}
+
+/* Estilo cuando el botón está presionado (active) */
+.convert-button:active {
+  background-color: #367c35; /* Color de fondo verde aún más oscuro cuando está presionado */
+  border-color: #367c35; /* Borde verde aún más oscuro cuando está presionado */
+  color: white; /* Color del texto blanco cuando está presionado */
+}
+
+/* Estilo para el select */
+select {
+  margin-top: 8px;
+  margin-bottom: 10px;
+  background-color:  rgb(23, 23, 33); /* Fondo cuando está conectado */
+  color:rgba(214, 13, 170, 0.966); /* Color de texto */
+  font-weight: bolder;
+  border: 0.1px solid #ffffff22; /* Borde blanco */
+  /*border-top: none;*/
+  border-radius: 1px;
+  padding: 10px 10px;
+  width: 98%;
+  margin-right: 20px;
+  cursor: pointer;
+  font-size: 12px;
+  transition: all 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+}
+
+/* Estilo cuando el select está enfocado (clickeado) */
+select:focus {
+  background-color: rgb(23, 23, 33);     /* Fondo blanco para las opciones */
+  color: rgba(214, 13, 170, 0.966);
+  outline: none;              /* Elimina el borde predeterminado de foco */
+}
+
+/* Estilo para las opciones dentro del select */
+option {
+  background-color: rgb(23, 23, 33);     /* Fondo blanco para las opciones */
+  color: #ffffff;                /* Color de texto oscuro */
+  padding: 10px;              /* Relleno de las opciones */
+}
+
+/* Estilo de la opción seleccionada */
+option:checked {
+  color: white;               /* Color blanco para el texto seleccionado */
+}
+
 
 /* Media query para pantallas pequeñas */
 @media (max-width: 768px) {
